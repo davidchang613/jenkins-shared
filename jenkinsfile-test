@@ -17,8 +17,8 @@ pipeline {
       }
     }
     stage('use functions in src') {
-      echo 'Steps in stage'
       steps {
+        echo 'Steps in stage'
         script {
           ftn.getA();
           ftn.setupFunction();
