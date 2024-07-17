@@ -1,9 +1,9 @@
 package functions
 
 def getA() {
-  sh 'getA() is called'
+  echo 'getA() is called'
 }
 
 def setupFunction() {
-  sh 'setupFunction()'
+  echo 'setupFunction()'
 }
