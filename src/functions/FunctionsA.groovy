@@ -7,3 +7,7 @@ def getA() {
 def setupFunction() {
   echo 'setupFunction()'
 }
+
+def showVersion() {
+  sh 'node --version'
+}
