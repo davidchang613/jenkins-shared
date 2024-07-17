@@ -18,10 +18,12 @@ pipeline {
     }
     stage('use functions in src') {
       echo 'Steps in stage'
-      script {
-        ftn.getA();
-        ftn.setupFunction();
-        ftn.showVersion();
+      steps {
+        script {
+          ftn.getA();
+          ftn.setupFunction();
+          ftn.showVersion();
+        }
       }
     }
   }
