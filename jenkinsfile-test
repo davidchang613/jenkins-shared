@@ -1,0 +1,26 @@
+@Library("davidchang613-kenkins-shared") _
+
+import functions.*
+
+def ftn = new FunctionsA()
+
+pipelins {
+  agent {
+    docker {
+      image 'node:16-alpine'
+    }
+  }
+  stages {
+    stage('Call helloWorldPara.groovy') {
+      steps {
+        helloWorldPara( "David", "Thursday") 
+      }
+    }
+    stage('use functions in src') {
+      echo 'Steps in stage'
+      script {
+        ftn.getA();
+        ftn.setupFunction();
+        ftn.showVersion();
+      }
+    }
