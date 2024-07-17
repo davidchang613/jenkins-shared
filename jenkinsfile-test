@@ -4,7 +4,7 @@ import functions.*
 
 def ftn = new FunctionsA()
 
-pipelins {
+pipeline {
   agent {
     docker {
       image 'node:16-alpine'
@@ -24,3 +24,5 @@ pipelins {
         ftn.showVersion();
       }
     }
+  }
+}
